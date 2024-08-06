@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import *
 import joblib
 
-model1 = joblib.load("Age_Income_Exp_Pred.joblib")
+# model1 = joblib.load("Age_Income_Exp_Pred.joblib")
 
 def check_income():
     age = float (name_ent.get())

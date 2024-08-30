@@ -31,10 +31,10 @@ green_end_point = (350, 350)
 green_color = (0, 255, 0)  # Green color in BGR
 cv2.rectangle(image, green_start_point, green_end_point, green_color, 3)
 
+
 x, y, w, h = 50, 50, 200, 150  # Coordinates for the rectangle
 cv2.rectangle(image, (x, y), (x+w, y+h), color, thickness)
 
 # Display the image
 cv2.imshow('Colorful Rectangles', image)
 cv2.waitKey(0)
-cv2.destroyAllWindows()

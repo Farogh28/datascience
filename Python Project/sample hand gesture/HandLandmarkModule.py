@@ -12,7 +12,7 @@ class MyHandTrackingModule:
         self.min_detection_confidence = min_detection_confidence
         self.min_tracking_confidence = min_tracking_confidence
         self.map_hands = mp.solutions.hands   
-        self.hands = self.map_hands.Hands()   
+        self.hands = self.map_hands.Hands()    
         self.show_landmarks = mp.solutions.drawing_utils
         self.change_landmark_cover = self.show_landmarks.DrawingSpec(color= (6, 48, 115), thickness = 3)
         self.change_connection_cover = self.show_landmarks.DrawingSpec(color= (7, 247, 203), thickness = 5)
@@ -42,7 +42,7 @@ class MyHandTrackingModule:
             for id, lm in enumerate(myhand.landmark):
                 h,w,c = img.shape
                 cx, cy = (int(lm.x*w),int(lm.y*h)) 
-                self.landmark_lst.append([id,cx,cy])
+                landmark_lst.append([id,cx,cy])
         return landmark_lst
 
 # capture = cv2.VideoCapture(0)
